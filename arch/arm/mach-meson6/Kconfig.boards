@@ -1,0 +1,17 @@
+if ARCH_MESON6
+
+config MACH_MESON6_SKT
+	depends on ARCH_MESON6
+	bool "Meson6 socket board"
+	default y 
+	help
+          Support for Amlogic Meson6 socket board.
+
+config MACH_MESON6_REF
+	depends on ARCH_MESON6
+	bool "Meson6 reference board"
+	default y 
+	help
+          Support for Amlogic Meson6 reference development platform.
+
+endif # ARCH_MESON6
