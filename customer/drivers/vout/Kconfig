@@ -1,0 +1,20 @@
+#
+# Video output configuration
+#
+menu "Amlogic LCD T3 module"
+	
+config AM_LCD_T3		
+	tristate "LCD T3 control"
+	default n
+	help
+		LCD T3 control
+endmenu	
+
+menu "Amlogic LCD ANX9804 module"	
+config AM_LCD_ANX9804	
+	tristate "LCD ANX9804 control"
+	default n
+	help
+		LCD ANX9804 control
+endmenu
+	

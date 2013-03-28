@@ -1,0 +1,10 @@
+
+menu "Amlogic BOARD ENV SYSFS"
+
+config BOARD_ENV
+	bool "BOARD ENV SYSFS"
+	default n
+	---help---
+	  This module adds support for board evn sysfs.
+
+endmenu

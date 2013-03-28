@@ -1,0 +1,428 @@
+#
+# Touchscreen driver configuration
+#
+
+menuconfig MESON_INPUT_TOUCHSCREEN
+	bool "Touchscreens"
+	help
+	  Say Y here, and a list of supported touchscreens will be displayed.
+	  This option doesn't affect the kernel.
+
+	  If unsure, say Y.
+
+if MESON_INPUT_TOUCHSCREEN
+
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G06
+	tristate "FocalTech I2C capacitive touchscreen for g06"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G06_E4
+	tristate "FocalTech I2C capacitive touchscreen for g06mtc600"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G22
+	tristate "FocalTech I2C capacitive touchscreen for g22"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5606 capacitive panel.	   
+	  
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G06_1003AC
+	tristate "FocalTech I2C capacitive touchscreen for g06 1003AC"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5606 capacitive panel.	  
+
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M1005A
+	tristate "FocalTech I2C capacitive touchscreen for g12 anda 1024*768 M1005A"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M805A
+	tristate "FocalTech I2C capacitive touchscreen for g12 anda 1024*768 M805A"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_N79A
+	tristate "FocalTech I2C capacitive touchscreen for YUKO n79a 800x1280"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+	  
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G17_SKYWORTH_T102
+	tristate "gsl3680 I2C capacitive touchscreen for g17_t102"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+	  
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M802A1
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 1024*768 M802A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.	
+
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M701A1
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 800*480 M701A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M705A5
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 1024*600 M705A5"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M709A5
+	tristate "gsl1680 I2C capacitive touchscreen for g12 onda 800*480 M709A5"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+	  
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M702A1
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 1024*600 M702A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.	
+	  
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M704A1
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 1280*800 M704A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+
+config GSl2680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M803A1
+	tristate "gsl2680 I2C capacitive touchscreen for g12 anda 1024*768 M803A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2680 capacitive panel.	  
+
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M1006
+	tristate "gsl3680 I2C capacitive touchscreen for g12 anda 1024*768 M1006"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+
+config GSl2680_CAPACITIVE_TOUCHSCREEN_G12_ONDA_M806A1
+	tristate "gsl2680 I2C capacitive touchscreen for g12 anda 1024*768 M806A1"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2680 capacitive panel.	
+
+config GSl2680_CAPACITIVE_TOUCHSCREEN_G12_ONDA_M806A2
+	tristate "gsl2680 I2C capacitive touchscreen for g12 anda 1024*768 M806A2"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2680 capacitive panel.	
+
+config GSl2680_CAPACITIVE_TOUCHSCREEN_G12_ONDA_M809A1
+	tristate "gsl2680 I2C capacitive touchscreen for g12 anda 1024*768 M809A1"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2680 capacitive panel.
+
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G12_ONDA_M978A1
+	tristate "gsl3680 I2C capacitive touchscreen for g12 anda 2048*1536 M978A1"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+	
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G12_ONDA_M978A2
+	tristate "gsl3680 I2C capacitive touchscreen for g12 anda 2048*1536 M978A2"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+
+config GSL1680_CAPACITIVE_TOUCHSCREEN_M7317CM
+	tristate "gsl1680 I2C capacitive touchscreen for M7317CM"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel
+	
+config GSL1680_CAPACITIVE_TOUCHSCREEN_86V
+	tristate "gsl1680 I2C capacitive touchscreen for 86V"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel
+	  
+config GSL1680_CAPACITIVE_TOUCHSCREEN_G05_M76
+	tristate "gsl1680 I2C capacitive touchscreen for G05_M76"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel
+	  
+config IPS_BD7248F_TOUCHSCREEN
+	tristate "IPS_BD7248F touch panel"
+	depends on I2C 
+	default n
+	help
+	  Say Y here if you want to use the IPS capacitive panel.
+	  
+config IPS_BC8601_TOUCHSCREEN
+	tristate "IPS_BC8601 for e4 touch panel"
+	depends on I2C 
+	default n
+	help
+	  Say Y here if you want to use the IPS capacitive panel.
+config GOODIX_GT82X_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix GT82X capacitive touchscreen"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called . 
+
+config GOODIX_GT801_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix GT801 capacitive touchscreen"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called . 
+
+config GOODIX_GT810_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix GT810 capacitive touchscreen"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called . 
+
+config GOODIX_GT813_827_828_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix gt813_827_828 capacitive touchscreen"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+	  
+	  To compile this driver as a module, choose M here: the
+	  module will be called . 
+config GOODIX_GT813_SELECT_MID7316CM
+	bool "SELECT MID7316CM"
+	depends on GOODIX_GT813_827_828_CAPACITIVE_TOUCHSCREEN
+	help
+		Say Y here if you want to use gt813 on the MID7316CM.
+
+config GOODIX_GT813_N77A_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix gt813 capacitive touchscreen for N77A "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called .
+
+config GOODIX_GT82X_W17_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix gt813 capacitive touchscreen for w17 "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called .
+
+config EGL_ASD_TOUCHSCREEN
+        tristate "Only use for ASD touch panel"
+        depends on I2C
+        default n
+        help
+          Say Y here if you want to use the IPS capacitive panel.
+
+config MG8698S_CAPACITIVE_TOUCHSCREEN
+	tristate "MG8698S capacitive touch panel"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the MG8698S capacitive panel.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called .	  
+
+config MG8698S_DISABLE_UPDATE
+	tristate "Disable MG8698S firmware Upadate"
+	depends on MG8698S_CAPACITIVE_TOUCHSCREEN
+	default n
+	help
+	  Say Y here if you want to dasable the MG8698S firmware update.
+	  
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G24
+	tristate "FocalTech I2C capacitive touchscreen for g24"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+	  
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G05
+	tristate "FocalTech I2C capacitive touchscreen for g06"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+	  
+config CONFIG_FOCALTECH_CAPACITIVE_TOUCHSCREEN_G05_M76
+	tristate "FocalTech I2C capacitive touchscreen for G05_M76"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+	  
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M708A1
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 1024*600 M708A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G12_ANDA_M708A2
+	tristate "gsl1680 I2C capacitive touchscreen for g12 anda 800*480 M708A2"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.	  
+
+config GOODIX_GT818X_CAPACITIVE_TOUCHSCREEN
+        tristate "Goodix GT818X capacitive touch panel"
+        depends on I2C
+        default n
+        help
+          Say Y here if you want to use the Goodix GT818X capacitive panel.
+
+          To compile this driver as a module, choose M here: the
+          module will be called .
+
+config GSl2682_CAPACITIVE_TOUCHSCREEN_G04_MTC600
+	tristate "gsl2682 I2C capacitive touchscreen for g04 mtc 1024*600 MTC600"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2682 capacitive panel.
+
+config GSl2682_CAPACITIVE_TOUCHSCREEN_G04_MTC848
+	tristate "gsl2682 I2C capacitive touchscreen for g04 mtc 800*480 MTC848"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2682 capacitive panel.
+
+config CT360_CAPACITIVE_TOUCHSCREEN
+	tristate "CT360 I2C capacitive touchscreen for g05"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+
+config GSl2682_CAPACITIVE_TOUCHSCREEN_G17_L7
+	tristate "gsl2682 I2C capacitive touchscreen for g17  1024*600 "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2682 capacitive panel.
+
+config GSl2682_CAPACITIVE_TOUCHSCREEN_G17_L8
+	tristate "gsl2682 I2C capacitive touchscreen for g17  1024*768 "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2682 capacitive panel.
+config FOCALTECH_CAPACITIVE_TOUCHSCREEN_G38_10203
+	tristate "FocalTech I2C capacitive touchscreen for g38_10203"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the FocalTech 5X06 capacitive panel.
+      
+config GSl1680_CAPACITIVE_TOUCHSCREEN_GSL1680_G05_S5V4
+	tristate "gsl1680 I2C capacitive touchscreen for S5 anda 1024*768 M802A1"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.	
+      
+      
+config AW5206_CAPACITIVE_TOUCHSCREEN
+	tristate "AW5206 I2C capacitive touchscreen for g05"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the AW 5X06 capacitive panel.
+	  
+config SSD25XX_CAPACITIVE_TOUCHSCREEN
+        tristate "SSD25xx I2C capacitive touchscreen for g24"
+        depends on I2C
+        default n
+        help
+          Say Y here if you want to use the ssd2533 capacitive panel.
+	  
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G38_T10203
+	tristate "gsl3680 I2C capacitive touchscreen for g38_t10203"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+
+config GSl1680_CAPACITIVE_TOUCHSCREEN_ROADA15
+	tristate "gsl2682 I2C capacitive touchscreen for ROADA15  "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl2682 capacitive panel.
+	  
+config GSl3680_CAPACITIVE_TOUCHSCREEN_G38_T97203
+	tristate "gsl3680 I2C capacitive touchscreen for g38_t97203"
+		depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl3680 capacitive panel.
+	  
+config GSl1680_CAPACITIVE_TOUCHSCREEN_G38_T7203
+	tristate "gsl1680 I2C capacitive touchscreen for g38 anda 800*480 T7203"
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the gsl1680 capacitive panel.
+	  	  
+config GOODIX_GT811_N72A_CAPACITIVE_TOUCHSCREEN
+	tristate "Goodix gt811 capacitive touchscreen for N72A "
+	depends on I2C
+	default n
+	help
+	  Say Y here if you want to use the Goodix capacitive panel.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called .	  
+endif # MESON_INPUT_TOUCHSCREEN

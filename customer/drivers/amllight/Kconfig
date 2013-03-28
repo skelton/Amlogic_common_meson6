@@ -1,0 +1,22 @@
+#
+# Ledlogo driver configuration
+#
+
+menuconfig LEDLOGO_DEVICES
+	bool "Ledlogo devices"
+	help
+	  Say Y here, and a list of supported touchscreens will be displayed.
+	  This option doesn't affect the kernel.
+
+	  If unsure, say Y.
+
+if LEDLOGO_DEVICES
+
+config LEDLOGO_AM
+	tristate "Ledlogo "
+
+	default n
+	help
+	  Say Y here if you want to use the light sensor ltr501.
+
+endif # LEDLOGO_DEVICES

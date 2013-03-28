@@ -1,0 +1,164 @@
+#
+# Misc strange devices
+#
+
+menuconfig MISC_DEVICES
+	bool "Misc devices"
+	---help---
+	  Say Y here to get to see options for device drivers from various
+	  different categories. This option alone does not add any kernel code.
+
+	  If you say N, all options in this submenu will be skipped and disabled.
+
+if MISC_DEVICES
+
+config BOSCH_BMA250
+	tristate "BMA250 acceleration sensor driver"
+	depends on I2C=y
+	help
+	  If you say yes here you get support for Bosch Sensortec's 
+	  acceleration sensors BMA250.
+	  NOT memsic solution
+
+config BOSCH_BMA222
+	tristate "BMA222 acceleration sensor driver"
+	depends on I2C=y
+	help
+	  If you say yes here you get support for Bosch Sensortec's 
+	  acceleration sensors BMA222.
+
+config BOSCH_BMA250_MEMSIC_SOLUTION
+	tristate "MEMSIC's BMA250 acceleration sensor driver "
+	depends on I2C=y
+	help
+	  If you say yes here you get Memsic's solution for Bosch Sensortec's 
+	  acceleration sensors BMA250.
+	  
+config SENSORS_MMA7660
+	tristate "MMA7660 acceleration sensor driver"
+	depends on I2C
+	help
+	  If you say yes here you get support for the Freescale's accelerometer sensor MMA7660
+
+ 
+config SENSORS_MMA8452
+	tristate "MMA8452 accelerometer sensor MMA8452 driver"
+	depends on I2C
+	help
+	  If you say yes here you get support for the Freescale's accelerometer sensor MMA8452
+
+	  
+
+config SENSORS_MMC328X
+	tristate "MMC328X magnetic sensor driver"
+	depends on I2C=y
+	help
+	  If you say yes here you get support for MEMSIC's 
+	  magnetic sensors MMC328XMS.
+
+config ECOMPASS
+	tristate "MEMSIC eCompass Driver Support"
+	depends on I2C
+	help
+	  If you say yes here you get support for the MEMSIC's eCompass
+	  
+config SENSORS_MC32X0
+	tristate "MC32X0 accelerometer sensor driver"
+	depends on I2C && INPUT_POLLDEV
+	help
+	  Say yes here to support the MC32X0's accelerometer sensor MC32X0
+
+config SENSORS_AFA750
+	tristate "AFA750 accelerometer sensor driver"
+	depends on I2C
+	help
+	  If you say yes here you get support for the AFA's accelerometer sensor AFA750
+
+choice
+	prompt "Preemption Model"
+	depends on SENSORS_AFA750
+    default CALI_NONE
+
+config CALI_NONE
+	bool "None"
+	help
+	  Say yes here to disable calibration function for AFA750
+
+config CALI_NEGATIVE
+	bool "negative calibration"
+	help
+	  Say yes here when the afa750 and LCD are laid towared different direction on your board
+
+config CALI_POSITIVE
+	bool "positive calibration"
+	help
+	  Say yes here when the afa750 and LCD are laid towared the same direction on your board 
+
+endchoice
+
+
+
+
+config SENSORS_DMARD06
+	tristate "DMARD06 accelerometer sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support Dominteck's DMARD06 accelerometer sensor
+
+config SENSORS_MMA865X
+	tristate "MMA865X accelerometer sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support the Freescale's MMA865X accelerometer sensor	  
+config SENSORS_CM36283
+	tristate "CM36283 light sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support the Capella's CM36283 light sensor and proximity sensor     
+
+config SENSORS_LSM303D
+	tristate "LSM303 sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support the sensor	 
+	   	
+config LIGHTSENSOR_EPL6814
+	bool "enable EPL6804"
+	depends on I2C
+	help
+	   Say Y here to enable the EPL6814.
+
+config SENSORS_STK8313
+	tristate "STK8313 accelerometer sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support Sensortek's STK8313 accelerometer sensor
+
+if(!SENSORS_STK8313)
+config SENSORS_STK8312
+	tristate "STK8312 accelerometer sensor driver"
+	depends on I2C
+	help
+	  Say yes here to support Sensortek's STK8312 accelerometer sensor
+endif
+
+config SENSORS_DMARD10
+ 		bool "DMARD10 GSENSOR support"
+ 		---help---
+ 		  Choose this option.
+ 		  If you say yes here you get support for accelemeter
+ 		  sensor DMARD10.
+
+config ENCRYTION
+	tristate "For encrytion"
+	help
+	  Say yes here to support encrytion
+
+config ADC_JS
+    tristate "Meson ADC Joystick support"
+    depends on SARADC_AM
+    default n
+    help
+      Say Y here if you want to use the Meson ADC joystick.
+
+endif # MISC_DEVICES
