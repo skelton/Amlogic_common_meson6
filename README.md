@@ -3,4 +3,4 @@ Amlogic_common_meson6
 
 Common m6
 
-minor changes for amlogic mx code
+3.0.50 kernel 5110B
